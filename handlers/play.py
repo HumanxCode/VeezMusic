@@ -1064,7 +1064,7 @@ async def ytplay(_, message: Message):
         await lel.delete()
         await message.reply_photo(
             photo="final.png",
-            caption=f"💡 **Track added to queue »** `{position}`\n\n🏷 **Name:** [{title[:35]}...]({url})\n⏱ **Duration:** `{duration}`\n🎧 **Request by:** {message.from_user.mention}",
+            caption=f"💡 **Lagu ditambahkan ke antrean »** `{position}`\n\n🏷 **𝗝𝘂𝗱𝘂𝗹:** [{title[:35]}...]({url})\n⏱ **𝗗𝘂𝗿𝗮𝘀𝗶:** `{duration}`\n🎧 **𝗣𝗲𝗿𝗺𝗶𝗻𝘁𝗮𝗮𝗻:** {message.from_user.mention}",
             reply_markup=keyboard,
         )
     else:
@@ -1088,14 +1088,14 @@ async def ytplay(_, message: Message):
             )
         except:
             await lel.edit(
-                "😕 **voice chat not found**\n\n» please turn on the voice chat first"
+                "😕 **obrolan suara tidak ditemukan**\n\n» tolong aktifkan voice chatnya dulu"
             )
             return
         await lel.delete()
         await message.reply_photo(
             photo="final.png",
-            caption=f"🏷 **Name:** [{title[:70]}]({url})\n⏱ **Duration:** `{duration}`\n💡 **Status:** `Playing`\n"
-            + f"🎧 **Request by:** {message.from_user.mention}",
+            caption=f"🏷 **𝗝𝘂𝗱𝘂𝗹:** [{title[:70]}]({url})\n⏱ **𝗗𝘂𝗿𝗮𝘀𝗶:** `{duration}`\n💡 **Status:** `𝙱𝚎𝚛𝚖𝚊𝚒𝚗`\n"
+            + f"🎧 **𝗣𝗲𝗿𝗺𝗶𝗻𝘁𝗮𝗮𝗻:** {message.from_user.mention}",
             reply_markup=keyboard,
         )
         os.remove("final.png")
